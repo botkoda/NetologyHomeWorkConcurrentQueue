@@ -17,7 +17,7 @@ public class Main {
         threadPool.shutdown();
         try {
             threadPool.awaitTermination(Long.MAX_VALUE, TimeUnit.NANOSECONDS);
-            System.out.println("Потоки заврешили работу");
+            System.out.println("Потоки завершили работу");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
