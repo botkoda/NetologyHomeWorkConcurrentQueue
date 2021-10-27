@@ -14,7 +14,7 @@ public class ThreadSpecialist implements Runnable {
     @Override
     public void run() {
         try {
-            while (v.volatileVal || queue.size() > 0) {
+            while (v.volatileVal || !queue.isEmpty()) {
                 Thread.sleep(SLEEP_TIME);
                 if ((str = queue.poll()) != null) {
                     System.out.println(Thread.currentThread().getName() + ": принял " + str);
